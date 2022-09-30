@@ -1,0 +1,113 @@
+1.Platform independence : In java, the JVM executes the bytecode generated from the java compiler. While the JVM is different for different OS but
+                          the bytecode generated from the compliler is executed in any platform like windows,linux ect.... that is the bytecode compiled 
+						  on the windows can be executed in linux OS and vice-versa. this makes the java platform independent.
+						  
+						  
+2.      Primitive datatype                                              Non-Primitive datatype						  
+    
+	* Primitive datatypes doesn't have state                         * Non-Primitive datatypes has states and behaviours
+	  and behaviours                                                 * ex: String, Array, any class written in java
+	* ex: byte,short,int,long,float,double,
+	      char,boolean.
+		  
+		  
+3.  class ClassName
+    {
+		
+    }		
+
+	Above shows the declaration of the class that includes keyword class followed by class name and the body of the class which is enclosed with
+	flower braces.
+	ex: class ProgramDemo
+	    {
+		
+	    }
+		
+		
+4.	class Results
+   {
+    static double percentage;
+	
+	static double calculatePercentage(double totalMarks, double recievedMarks)
+	{
+		if (totalMarks !=0 && recievedMarks!=0)
+		percentage = ((recievedMarks/totalMarks)*100);
+		return percentage;
+	}
+    }
+	
+	
+	class Runner
+    {
+	public static void main(String[] args)
+	{
+	double result =	Results.calculatePercentage(600,528);
+	System.out.println("obtained percentage is : "+ result);
+	}
+    }
+	
+	
+5. Remove duplicates in an below array
+    int[] values = {34,78,90,53,34,11,53,15,78,91,8,4,67,11};	
+Ans: int[] valus = {34,78,90,53,11,15,91,8,4,67};
+
+    class Program1
+   {
+	public static void main(String[] args)
+	{
+		int[] values = {34,78,90,53,34,11,53,15,78,91,8,4,67,11};
+		for (int index=0; index<values.length; index++)
+		{
+		    for (int point=0; point<values.length; point++)
+			{
+				if (values[index] == values[point])
+				{
+					values[index]=0;
+				}
+			}
+		}
+		
+	}
+    }
+	
+	
+	
+6. public static void main (String[] args)	
+
+    The above line shows the declaration of main method the terms used in the declaration are :
+	public --> Access specifier
+	static --> Non access specifier
+	void --> return type
+	main --> name of the method 
+	String[] --> Array of string
+	args --> parameter
+	 
+	 
+	The java program execution always starts from the main method, the JVM always looks for the main method while it ececuting the 
+	bytecode.
+	Always the Stack memory in the heap memory is used to execute the methods.
+	
+	
+8. class Program2
+  {
+  static double seconds;
+  
+  static double convert(double hour)
+  {
+	  seconds = (hour*60*60);
+	  return seconds;
+  }
+  }
+  
+  class ProgramRunner
+ {
+	public static void main(String[] args)
+	{
+		double result = Program2.convert(4);
+		System.out.println("The converted seconds : "+ result);
+	}
+ }
+
+
+
+
